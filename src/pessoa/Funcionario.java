@@ -1,9 +1,16 @@
 package pessoa;
 
-public class Funcionario extends Pessoa {
+public class Funcionario extends Usuario {
 
+	
+	public Funcionario() {}
+	public Funcionario(String nome, String sobrenome,
+			int id, String senha, int cpf) {
+		super(nome, sobrenome, id, senha, cpf);
+	}
+	
 	@Override
-	public void Cadastrar() {
+	public void cadastrar() {
 		
 	}
 

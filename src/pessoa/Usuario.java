@@ -1,14 +1,28 @@
 package pessoa;
 
-public abstract class Pessoa {
+import java.util.ArrayList;
+import java.util.List;
 
+public abstract class Usuario {
+
+	public Usuario() {}
+	public Usuario(String nome, String sobrenome, int id, String senha, int cpf) {
+		this.nome = nome;
+		this.sobrenome = sobrenome;
+		this.id = id;
+		this.senha = senha;
+		this.cpf = cpf;
+		
+	}
+	
 	private String nome;
 	private String sobrenome;
-	private String id;
+	private int id;
 	private String senha;
 	private int cpf;
+	List<Usuario> listaUsuarios = new ArrayList<>();
 	
-	public abstract void Cadastrar();
+	public abstract void cadastrar();
 	public abstract void logar();
 
 	public String getNome() {
@@ -27,11 +41,11 @@ public abstract class Pessoa {
 		this.sobrenome = sobrenome;
 	}
 
-	public String getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	

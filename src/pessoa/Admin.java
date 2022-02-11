@@ -1,11 +1,11 @@
 package pessoa;
 
-public class Admin extends Pessoa {
+public class Admin extends Usuario {
 	
 	private int keyAuth;
 
 	@Override
-	public void Cadastrar() {
+	public void cadastrar(Usuario usuario) {
 		
 	}
 	
