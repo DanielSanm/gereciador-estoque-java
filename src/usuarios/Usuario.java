@@ -1,4 +1,4 @@
-package pessoa;
+package usuarios;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.List;
 public abstract class Usuario {
 
 	public Usuario() {}
-	public Usuario(String nome, String sobrenome, int id, String senha, int cpf) {
+	public Usuario(String nome, String sobrenome, int id, String senha, String cpf) {
 		this.nome = nome;
 		this.sobrenome = sobrenome;
 		this.id = id;
@@ -19,8 +19,8 @@ public abstract class Usuario {
 	private String sobrenome;
 	private int id;
 	private String senha;
-	private int cpf;
-	List<Usuario> listaUsuarios = new ArrayList<>();
+	private String cpf;
+	public static List<Usuario> listaUsuarios = new ArrayList<>();
 	
 	public abstract void cadastrar();
 	public abstract void logar();
@@ -57,12 +57,18 @@ public abstract class Usuario {
 		this.senha = senha;
 	}
 
-	public int getCpf() {
+	public String getCpf() {
 		return cpf;
 	}
 
-	public void setCpf(int cpf) {
+	public void setCpf(String cpf) {
 		this.cpf = cpf;
+	}
+	
+	@Override
+	public String toString() {
+		return "[nome: " + nome + ", sobrenome: " + sobrenome + ", Id: " +
+	id + ", senha: " + senha + ", cpf: " + cpf + "]";
 	}
 
 }

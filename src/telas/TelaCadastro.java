@@ -2,54 +2,48 @@ package telas;
 
 import java.util.Scanner;
 
-import pessoa.Admin;
-import pessoa.Funcionario;
+import usuarios.Admin;
+import usuarios.Funcionario;
+import usuarios.Usuario;
 
 public class TelaCadastro {
 
-	static boolean cadastroOk = false;
+	
 
 	public static void cadastrar() {
 
 		Scanner sc = new Scanner(System.in);
+		Usuario funcionario = new Funcionario();
+		Usuario admin = new Admin();
 
 		System.out.println("\n=====================\n");
 		System.out.println("Cadastro: \n");
-		System.out.print("Nome: ");
-
-		System.out.print("Sobrenome: ");
-		String sobrenome = sc.nextLine();
-
-		System.out.print("Id: ");
-		int id = sc.nextInt();
-
-		System.out.print("CPF (somente números): ");
-		int cpf = sc.nextInt();
+		System.out.println("Qual o seu tipo de usuário: ");
+		System.out.println("1. Funcionário");
+		System.out.println("2. Administrador");
+		System.out.println("3. Voltar");
 		
-		do {
-			System.out.print("Senha: ");
-			String senha = sc.nextLine();
-
-			System.out.print("Confirme a senha: ");
-			String confirmSenha = sc.nextLine();
-
-			validaSenhas(senha, confirmSenha);
-
-		} while (!cadastroOk);
+		System.out.print("\nEscolha uma opção: ");
+		int opcao = sc.nextInt();
 		
+		switch(opcao) {
+		case 1:
+			funcionario.cadastrar();
+		case 2:
+			admin.cadastrar();
+		case 3:
+			TelaInicial.iniciar();
+		}
+		
+		/*
+		
+		*/
 		
 		
 		sc.close();
 
 	}
 
-	static void validaSenhas(String senha1, String senha2) {
-		if (senha1.equals(senha2)) {
-			cadastroOk = true;
-		} else {
-			System.out.println("\n*** As senhas não coicidem ***\n");
-		}
-
-	}
+	
 
 }
