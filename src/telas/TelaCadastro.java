@@ -8,8 +8,6 @@ import usuarios.Usuario;
 
 public class TelaCadastro {
 
-	
-
 	public static void cadastrar() {
 
 		Scanner sc = new Scanner(System.in);
@@ -35,15 +33,6 @@ public class TelaCadastro {
 			TelaInicial.iniciar();
 		}
 		
-		/*
-		
-		*/
-		
-		
 		sc.close();
-
 	}
-
-	
-
 }
