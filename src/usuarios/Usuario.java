@@ -3,6 +3,8 @@ package usuarios;
 import java.util.ArrayList;
 import java.util.List;
 
+import estoque.Estoque;
+
 public abstract class Usuario {
 
 	public Usuario() {}
@@ -21,6 +23,7 @@ public abstract class Usuario {
 	private String senha;
 	private String cpf;
 	public static List<Usuario> listaUsuarios = new ArrayList<>();
+	public List<Estoque> estoques = new ArrayList<>();
 	
 	public abstract void cadastrar();
 	public abstract void logar();

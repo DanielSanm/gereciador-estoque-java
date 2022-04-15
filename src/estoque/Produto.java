@@ -9,6 +9,18 @@ public class Produto {
 	private int codigo;
 	private String posicao;
 	private Prateleira prateleira;
+	
+	public Produto(
+			String nome, int qtd, String dimensoes,
+			String peso, int codigo, String posicao, Prateleira prateleira) {
+		this.nome = nome;
+		this.qtd = qtd;
+		this.dimensoes = dimensoes;
+		this.peso = peso;
+		this.codigo = codigo;
+		this.posicao = posicao;
+		this.prateleira = prateleira;
+	};
 
 	public String getNome() {
 		return nome;
