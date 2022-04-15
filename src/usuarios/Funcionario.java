@@ -2,7 +2,7 @@ package usuarios;
 
 import java.util.Scanner;
 
-import telas.TelaSistema;
+import telas.telasSistema.TelaEstoque;
 
 public class Funcionario extends Usuario {
 
@@ -49,7 +49,7 @@ public class Funcionario extends Usuario {
 		} while (!cadastroOk);
 		
 		listaUsuarios.add(new Funcionario(nome, sobrenome, id, senha, cpf));
-		TelaSistema.mostrarSistema();
+		TelaEstoque.iniciarSistema();
 		
 		sc.close();
 

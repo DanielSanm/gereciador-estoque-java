@@ -1,4 +1,4 @@
-package produto;
+package estoque;
 
 public class Produto {
 
@@ -65,5 +65,7 @@ public class Produto {
 	public void setPrateleira(Prateleira prateleira) {
 		this.prateleira = prateleira;
 	}
+	
+	
 
 }
