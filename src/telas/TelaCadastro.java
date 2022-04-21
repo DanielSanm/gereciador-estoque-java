@@ -8,7 +8,7 @@ import usuarios.Usuario;
 
 public class TelaCadastro {
 
-	public static void cadastrar() {
+	public static void iniciar() {
 
 		Scanner sc = new Scanner(System.in);
 		Usuario funcionario = new Funcionario();

@@ -29,11 +29,11 @@ public class TelaInicial {
 			
 			switch(opcao) {
 			case 1:
-				TelaLogin.logar();
+				TelaLogin.iniciar();
 				opcaoValida = true;
 				break;
 			case 2:
-				TelaCadastro.cadastrar();
+				TelaCadastro.iniciar();
 				opcaoValida = true;
 				break;
 			case 3:

@@ -49,7 +49,7 @@ public class Funcionario extends Usuario {
 		} while (!cadastroOk);
 		
 		listaUsuarios.add(new Funcionario(nome, sobrenome, id, senha, cpf));
-		TelaEstoque.iniciarSistema();
+		TelaEstoque.iniciar();
 		
 		sc.close();
 

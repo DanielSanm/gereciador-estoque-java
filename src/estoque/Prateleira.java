@@ -4,15 +4,37 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Prateleira {
-
+	
 	private String id;
 	private Estoque estoque;
-	public List<Produto> produtos = new ArrayList<>();
+	public static List<Produto> produtos = new ArrayList<>();
 
 	public Prateleira(String id) {
 		this.id = id;
 	}
 
+	public static void verTodosProdutos() {
+		produtos.stream().forEach(System.out::println);
+	}
+	
+	public static void buscarProduto(String nome) {
+		produtos.stream()
+		.filter(p -> p.getNome().equalsIgnoreCase(nome))
+		.forEach(System.out::println);
+	}
+	
+	public static void buscarProduto(int codigo) {
+		produtos.stream()
+		.filter(p -> p.getCodigo() == codigo)
+		.forEach(System.out::println);
+	}
+	
+	public static void buscarProduto(Prateleira prateleira) {
+		produtos.stream()
+		.filter(p -> p.getPrateleira().id.equals(prateleira.id))
+		.forEach(System.out::println);
+	}
+	
 	public void adicionarProduto(Produto produto) {
 		produtos.add(produto);
 		produto.setPrateleira(this);
@@ -35,6 +57,6 @@ public class Prateleira {
 	}
 
 	public String toString() {
-		return "[Id: " + this.id + ", Produtos(" + this.produtos.size() + ")]";
+		return "[Id: " + this.id + ", Produtos(" + produtos.size() + ")]";
 	}
 }

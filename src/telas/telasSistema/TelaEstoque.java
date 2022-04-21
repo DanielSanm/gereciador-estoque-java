@@ -6,7 +6,7 @@ import telas.TelaInicial;
 
 public class TelaEstoque {
 
-	public static void iniciarSistema() {
+	public static void iniciar() {
 //		for(Usuario usuarios: Usuario.listaUsuarios) {
 //			System.out.println(usuarios);
 //		}
@@ -27,11 +27,13 @@ public class TelaEstoque {
 		case 1:
 			
 		case 2:
-			
+			TelaPrateleiraProduto.iniciar();
 		case 3:
 			TelaInicial.iniciar();
 		default:
 			System.out.println("\n*** Opção inválida, digite um opção válida! ***\n");
 		}
+		
+		sc.close();
 	}
 }

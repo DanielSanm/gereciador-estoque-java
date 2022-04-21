@@ -2,7 +2,7 @@ package telas;
 
 public class TelaLogin {
 	
-	public static void logar() {
+	public static void iniciar() {
 		
 		System.out.println("logando...");
 	}

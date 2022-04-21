@@ -1,5 +1,7 @@
 package estoque;
 
+import java.util.Objects;
+
 public class Produto {
 
 	private String nome;
@@ -76,6 +78,24 @@ public class Produto {
 
 	public void setPrateleira(Prateleira prateleira) {
 		this.prateleira = prateleira;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(codigo, nome, posicao, prateleira);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Produto other = (Produto) obj;
+		return codigo == other.codigo && Objects.equals(nome, other.nome) && Objects.equals(posicao, other.posicao)
+				&& Objects.equals(prateleira, other.prateleira);
 	}
 	
 	
