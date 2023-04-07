@@ -3,6 +3,7 @@ package estoque;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.BiFunction;
+import java.util.function.UnaryOperator;
 
 import usuarios.Usuario;
 
@@ -16,6 +17,8 @@ public class Estoque {
 		prateleiras.add(prateleira);
 		prateleira.setEstoque(this);
 	}
+	
+	public static UnaryOperator<String> buscar = s -> null;
 	
 	public static BiFunction<Produto, Prateleira, String> mostrarEstoque = 
 			(prod, prat) -> {

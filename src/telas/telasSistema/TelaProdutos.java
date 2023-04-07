@@ -26,7 +26,10 @@ public class TelaProdutos {
 		case 1:
 			Prateleira.verTodosProdutos();
 		case 2:
-			
+			System.out.println("Pesquise: ");
+			Prateleira.produtos.stream()
+			.filter(p -> Prateleira.buscar.apply(sc.nextLine(), p))
+			.forEach(System.out::println);
 		case 3:
 			
 		case 4:

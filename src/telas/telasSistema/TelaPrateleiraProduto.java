@@ -8,7 +8,7 @@ public class TelaPrateleiraProduto {
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.println("\n=====================\n");
-		System.out.println("\\nO que deseja gerenciar?");
+		System.out.println("\nO que deseja gerenciar?");
 		System.out.println("1. Prateleiras");
 		System.out.println("2. Produtos");
 		System.out.println("3. Voltar");
